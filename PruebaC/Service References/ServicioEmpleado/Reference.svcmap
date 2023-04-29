@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5b257960-c6dd-4307-9816-9b902434ef7d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:65052/WCFEmpleado.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFEmpleado.xsd" MetadataType="Schema" ID="a9ebfc1d-cd23-4da4-9532-fbddeb1b5ad3" SourceId="1" SourceUrl="http://localhost:65052/WCFEmpleado.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCFEmpleado.wsdl" MetadataType="Wsdl" ID="11d62ac2-2c81-4660-9afe-9fd1ff9239e2" SourceId="1" SourceUrl="http://localhost:65052/WCFEmpleado.svc?wsdl" />
+    <MetadataFile FileName="WCFEmpleado1.xsd" MetadataType="Schema" ID="852290ad-77e4-49bb-9849-feab47254352" SourceId="1" SourceUrl="http://localhost:65052/WCFEmpleado.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCFEmpleado1.wsdl" MetadataType="Wsdl" ID="515b293a-3244-4d12-af51-1e90619df863" SourceId="1" SourceUrl="http://localhost:65052/WCFEmpleado.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="WCFEmpleado.disco" MetadataType="Disco" ID="1ee736ab-31ed-422f-8ee1-2f2352714a3b" SourceId="1" SourceUrl="http://localhost:65052/WCFEmpleado.svc?disco" />
+    <MetadataFile FileName="WCFEmpleado2.xsd" MetadataType="Schema" ID="e104bea7-5e45-4f3e-84db-f6a5015f381f" SourceId="1" SourceUrl="http://localhost:65052/WCFEmpleado.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

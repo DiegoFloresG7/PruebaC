@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4521aa80-edce-4914-a841-6720dde47ed1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:65052/WCFCatalogo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFCatalogo.xsd" MetadataType="Schema" ID="400b307d-3ad7-4b1f-ac0d-98b2432fbda8" SourceId="1" SourceUrl="http://localhost:65052/WCFCatalogo.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCFCatalogo1.xsd" MetadataType="Schema" ID="b0eb4f2b-c781-4897-9cfd-ce01ec4f706d" SourceId="1" SourceUrl="http://localhost:65052/WCFCatalogo.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCFCatalogo2.xsd" MetadataType="Schema" ID="34294ac8-d089-42da-852a-0ca336c7d420" SourceId="1" SourceUrl="http://localhost:65052/WCFCatalogo.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCFCatalogo.wsdl" MetadataType="Wsdl" ID="69ccdd8c-cb11-40c9-92f2-00446cf8c8a7" SourceId="1" SourceUrl="http://localhost:65052/WCFCatalogo.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="WCFCatalogo.disco" MetadataType="Disco" ID="4aaf7768-a802-4649-a796-c67af9e60491" SourceId="1" SourceUrl="http://localhost:65052/WCFCatalogo.svc?disco" />
+    <MetadataFile FileName="WCFCatalogo1.wsdl" MetadataType="Wsdl" ID="f470d951-b357-4b99-9e1a-cb12e602284c" SourceId="1" SourceUrl="http://localhost:65052/WCFCatalogo.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

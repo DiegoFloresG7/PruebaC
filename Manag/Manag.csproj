@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D44EEE6-DF11-4454-ACBF-713896E7B0C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Manag</RootNamespace>
+    <AssemblyName>Manag</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\Agenda.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Agenda_R_Fecha_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Agenda_R_Id_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Clinica_R_All_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Consula_R_Filtro_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Consula_R_PorIdPacientePaciente_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Consula_R_PorId_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Consulta.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtClinica.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtClinica_R_Datos_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtConsultorio.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtConsultorio_R_DATOS_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtEquipoTrabajo.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtEquipoTrabajo_R_Datos_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtEspecialidad.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtEspecialidad_R_Datos_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtEstatus.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtEstatus_R_Datos_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtInformacion.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtInformacion_R_DATOS_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtPregunta.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtTipoEnConsulta.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Doctor_R_All_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Especialidad_R_ParrafosImagenesPrincipal_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Especialidad_R_ParrafosImagenes_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Imagen_R_PorAgenda_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Imagen_R_PorConsulta_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Imagen_R_PorIdConsulta_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Informacion_R_Datos_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelPruebas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPruebas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelPruebas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelPruebas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPruebas.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Paciente.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Paciente_R_All_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Paciente_R_DATOS_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Paciente_R_HistoriaClinica_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Pregunta_R_PorTipoEnConsulta_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Puesto.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Puesto_R_Datos_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Rel_Consulta_Diagnostico.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Rel_Consulta_Fotos.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Rel_EnConsulta_Pregunta.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Rel_EnConsulta_Pregunta_Respuesta.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Rel_Especialidad_Imagen.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sp_helpdiagrams_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\TipoEnConsulta_R_All_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Usuario.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Usuario_R_DATOS_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Usuario_R_Login_Result.cs">
+      <DependentUpon>ModelPruebas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service1.Designer.cs">
+      <DependentUpon>Service1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="DB\ModelPruebas.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelPruebas.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\ModelPruebas.edmx.diagram">
+      <DependentUpon>ModelPruebas.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\ModelPruebas.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelPruebas.edmx</DependentUpon>
+      <LastGenOutput>ModelPruebas.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\ModelPruebas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelPruebas.edmx</DependentUpon>
+      <LastGenOutput>ModelPruebas.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

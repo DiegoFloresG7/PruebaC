@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PruebasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CantidadEntregasPorMes">
+          <Key>
+            <PropertyRef Name="IdRelEmpleadoMes" />
+          </Key>
+          <Property Name="IdRelEmpleadoMes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEmpleado" Type="int" />
+          <Property Name="Mes" Type="int" />
+          <Property Name="IdCantEnetregas" Type="int" />
+        </EntityType>
+        <EntityType Name="Empleado">
+          <Key>
+            <PropertyRef Name="IdEmpleado" />
+          </Key>
+          <Property Name="IdEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="250" />
+          <Property Name="IdRol" Type="int" />
+        </EntityType>
+        <EntityType Name="RelEmpleadoSalario">
+          <Key>
+            <PropertyRef Name="IdRelSalarioEmpleado" />
+          </Key>
+          <Property Name="IdRelSalarioEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdSalario" Type="int" />
+          <Property Name="IdEmpleado" Type="int" />
+        </EntityType>
+        <Function Name="CantidadEntregasPorMes_C_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdEmpleado" Type="int" Mode="In" />
+          <Parameter Name="Mes" Type="int" Mode="In" />
+          <Parameter Name="IdCantEntregas" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CantidadEntregasPorMes_R_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdEmpleado" Type="int" Mode="In" />
+          <Parameter Name="IDMES" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CtRol_R_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Empleado_C_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="IdRol" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Empleado_R_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Empleado_R_NuevoRegistro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="PruebasModelStoreContainer">
+          <EntitySet Name="CantidadEntregasPorMes" EntityType="Self.CantidadEntregasPorMes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RelEmpleadoSalario" EntityType="Self.RelEmpleadoSalario" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PruebasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CantidadEntregasPorMes">
+          <Key>
+            <PropertyRef Name="IdRelEmpleadoMes" />
+          </Key>
+          <Property Name="IdRelEmpleadoMes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEmpleado" Type="Int32" />
+          <Property Name="Mes" Type="Int32" />
+          <Property Name="IdCantEnetregas" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Empleado">
+          <Key>
+            <PropertyRef Name="IdEmpleado" />
+          </Key>
+          <Property Name="IdEmpleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="IdRol" Type="Int32" />
+        </EntityType>
+        <EntityType Name="RelEmpleadoSalario">
+          <Key>
+            <PropertyRef Name="IdRelSalarioEmpleado" />
+          </Key>
+          <Property Name="IdRelSalarioEmpleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdSalario" Type="Int32" />
+          <Property Name="IdEmpleado" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="PruebasEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CantidadEntregasPorMes" EntityType="Self.CantidadEntregasPorMes" />
+          <EntitySet Name="Empleado" EntityType="Self.Empleado" />
+          <EntitySet Name="RelEmpleadoSalario" EntityType="Self.RelEmpleadoSalario" />
+          <FunctionImport Name="CantidadEntregasPorMes_C_datos" ReturnType="Collection(Decimal)">
+            <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
+            <Parameter Name="Mes" Mode="In" Type="Int32" />
+            <Parameter Name="IdCantEntregas" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CantidadEntregasPorMes_R_datos" ReturnType="Collection(PruebasModel.CantidadEntregasPorMes_R_datos_Result)">
+            <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
+            <Parameter Name="IDMES" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CtRol_R_datos" ReturnType="Collection(PruebasModel.CtRol_R_datos_Result)" />
+          <FunctionImport Name="Empleado_C_datos" ReturnType="Collection(Decimal)">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="IdRol" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Empleado_R_datos" ReturnType="Collection(PruebasModel.Empleado_R_datos_Result)">
+          <Parameter Name="Nombre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Empleado_R_NuevoRegistro" ReturnType="Collection(Int32)" />
+        </EntityContainer>
+        <ComplexType Name="CantidadEntregasPorMes_R_datos_Result">
+          <Property Type="Int32" Name="IdEmpleado" Nullable="true" />
+          <Property Type="Int32" Name="Mes" Nullable="true" />
+          <Property Type="Int32" Name="IdCantEnetregas" Nullable="true" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="250" />
+        </ComplexType>
+        <ComplexType Name="CtRol_R_datos_Result">
+          <Property Type="Int32" Name="IdRol" Nullable="true" />
+          <Property Type="String" Name="DescripcionRol" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="Empleado_R_datos_Result">
+          <Property Type="Int32" Name="IdEmpleado" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="250" />
+          <Property Type="Int32" Name="IdRol" Nullable="true" />
+          <Property Type="String" Name="DescripcionRol" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PruebasModelStoreContainer" CdmEntityContainer="PruebasEntities">
+          <EntitySetMapping Name="CantidadEntregasPorMes">
+            <EntityTypeMapping TypeName="PruebasModel.CantidadEntregasPorMes">
+              <MappingFragment StoreEntitySet="CantidadEntregasPorMes">
+                <ScalarProperty Name="IdRelEmpleadoMes" ColumnName="IdRelEmpleadoMes" />
+                <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+                <ScalarProperty Name="Mes" ColumnName="Mes" />
+                <ScalarProperty Name="IdCantEnetregas" ColumnName="IdCantEnetregas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empleado">
+            <EntityTypeMapping TypeName="PruebasModel.Empleado">
+              <MappingFragment StoreEntitySet="Empleado">
+                <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RelEmpleadoSalario">
+            <EntityTypeMapping TypeName="PruebasModel.RelEmpleadoSalario">
+              <MappingFragment StoreEntitySet="RelEmpleadoSalario">
+                <ScalarProperty Name="IdRelSalarioEmpleado" ColumnName="IdRelSalarioEmpleado" />
+                <ScalarProperty Name="IdSalario" ColumnName="IdSalario" />
+                <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CantidadEntregasPorMes_C_datos" FunctionName="PruebasModel.Store.CantidadEntregasPorMes_C_datos" />
+          <FunctionImportMapping FunctionImportName="CantidadEntregasPorMes_R_datos" FunctionName="PruebasModel.Store.CantidadEntregasPorMes_R_datos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PruebasModel.CantidadEntregasPorMes_R_datos_Result">
+                <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+                <ScalarProperty Name="Mes" ColumnName="Mes" />
+                <ScalarProperty Name="IdCantEnetregas" ColumnName="IdCantEnetregas" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CtRol_R_datos" FunctionName="PruebasModel.Store.CtRol_R_datos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PruebasModel.CtRol_R_datos_Result">
+                <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+                <ScalarProperty Name="DescripcionRol" ColumnName="DescripcionRol" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Empleado_C_datos" FunctionName="PruebasModel.Store.Empleado_C_datos" />
+          <FunctionImportMapping FunctionImportName="Empleado_R_datos" FunctionName="PruebasModel.Store.Empleado_R_datos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PruebasModel.Empleado_R_datos_Result">
+                <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+                <ScalarProperty Name="DescripcionRol" ColumnName="DescripcionRol" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Empleado_R_NuevoRegistro" FunctionName="PruebasModel.Store.Empleado_R_NuevoRegistro" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
