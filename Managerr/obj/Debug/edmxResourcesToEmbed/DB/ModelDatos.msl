@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="clinicaModelStoreContainer" CdmEntityContainer="clinicaEntities">
+    <EntitySetMapping Name="Consulta">
+      <EntityTypeMapping TypeName="clinicaModel.Consulta">
+        <MappingFragment StoreEntitySet="Consulta">
+          <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
+          <ScalarProperty Name="IdPaciente" ColumnName="IdPaciente" />
+          <ScalarProperty Name="IdAgenda" ColumnName="IdAgenda" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="PadecimientoActual" ColumnName="PadecimientoActual" />
+          <ScalarProperty Name="EnConsulta" ColumnName="EnConsulta" />
+          <ScalarProperty Name="PlanTerapeutico" ColumnName="PlanTerapeutico" />
+          <ScalarProperty Name="FechaConsulta" ColumnName="FechaConsulta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Agenda_C_Nueva" FunctionName="clinicaModel.Store.Agenda_C_Nueva" />
+  </EntityContainerMapping>
+</Mapping>

@@ -55,13 +55,25 @@
     <Compile Include="DB\CantidadEntregasPorMes_R_datos_Result.cs">
       <DependentUpon>ModelEmpleado.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\CtEntregaBono.cs">
+      <DependentUpon>ModelEmpleado.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\CtRol_R_datos_Result.cs">
+      <DependentUpon>ModelEmpleado.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CtSalario.cs">
       <DependentUpon>ModelEmpleado.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Empleado.cs">
       <DependentUpon>ModelEmpleado.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Empleado_R_datos_Result.cs">
+      <DependentUpon>ModelEmpleado.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Empleado_R_IdEMPLEADO_Result.cs">
+      <DependentUpon>ModelEmpleado.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Empleado_R_Nomina_Result.cs">
       <DependentUpon>ModelEmpleado.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ModelEmpleado.Context.cs">
@@ -79,7 +91,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelEmpleado.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DB\RelEmpleadoBono.cs">
+      <DependentUpon>ModelEmpleado.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\RelEmpleadoSalario.cs">
+      <DependentUpon>ModelEmpleado.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\RelEntregaBono.cs">
       <DependentUpon>ModelEmpleado.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\DTOEmpleado.cs" />

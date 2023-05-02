@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="clinicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Consulta">
+    <Key>
+      <PropertyRef Name="IdConsulta" />
+      <PropertyRef Name="IdPaciente" />
+    </Key>
+    <Property Name="IdConsulta" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPaciente" Type="bigint" Nullable="false" />
+    <Property Name="IdAgenda" Type="bigint" />
+    <Property Name="Motivo" Type="varchar" MaxLength="500" />
+    <Property Name="PadecimientoActual" Type="varchar" MaxLength="500" />
+    <Property Name="EnConsulta" Type="text" />
+    <Property Name="PlanTerapeutico" Type="varchar" MaxLength="500" />
+    <Property Name="FechaConsulta" Type="datetime" />
+  </EntityType>
+  <Function Name="Agenda_C_Nueva" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPaciente" Type="int" Mode="In" />
+    <Parameter Name="IdDoctor" Type="int" Mode="In" />
+    <Parameter Name="FechaCita" Type="datetime" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="IdEstatus" Type="int" Mode="In" />
+    <Parameter Name="IdClinica" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="clinicaModelStoreContainer">
+    <EntitySet Name="Consulta" EntityType="Self.Consulta" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

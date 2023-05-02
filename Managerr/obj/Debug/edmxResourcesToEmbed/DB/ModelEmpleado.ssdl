@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PruebasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CantidadEntregasPorMes">
+    <Key>
+      <PropertyRef Name="IdRelEmpleadoMes" />
+    </Key>
+    <Property Name="IdRelEmpleadoMes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEmpleado" Type="int" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="IdCantEnetregas" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'Pruebas.dbo.CtBono' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="CtBono">
+          <Property Name="IdBono" Type="int" />
+          <Property Name="DescripcionBono" Type="varchar" MaxLength="50" />
+          <Property Name="TotalBono" Type="float" />
+        </EntityType>-->
+  <EntityType Name="CtEntregaBono">
+    <Key>
+      <PropertyRef Name="IdBonoEntregas" />
+    </Key>
+    <Property Name="IdBonoEntregas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+    <Property Name="Total" Type="float" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'Pruebas.dbo.CtRoles' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="CtRoles">
+          <Property Name="IdRol" Type="int" />
+          <Property Name="DescripcionRol" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="CtSalario">
+    <Key>
+      <PropertyRef Name="idSalario" />
+    </Key>
+    <Property Name="idSalario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+    <Property Name="Total" Type="float" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpleado" />
+    </Key>
+    <Property Name="IdEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="250" />
+    <Property Name="IdRol" Type="int" />
+  </EntityType>
+  <EntityType Name="RelEmpleadoBono">
+    <Key>
+      <PropertyRef Name="IdRelEmpleadoBono" />
+    </Key>
+    <Property Name="IdRelEmpleadoBono" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdBono" Type="int" />
+    <Property Name="IdRol" Type="int" />
+  </EntityType>
+  <EntityType Name="RelEmpleadoSalario">
+    <Key>
+      <PropertyRef Name="IdRelSalarioEmpleado" />
+    </Key>
+    <Property Name="IdRelSalarioEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSalario" Type="int" />
+    <Property Name="IdEmpleado" Type="int" />
+  </EntityType>
+  <EntityType Name="RelEntregaBono">
+    <Key>
+      <PropertyRef Name="IdRelEntregaEmpleado" />
+    </Key>
+    <Property Name="IdRelEntregaEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEntrega" Type="int" />
+    <Property Name="IdEmpleado" Type="int" />
+  </EntityType>
+  <Function Name="CantidadEntregasPorMes_C_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpleado" Type="int" Mode="In" />
+    <Parameter Name="Mes" Type="int" Mode="In" />
+    <Parameter Name="IdCantEntregas" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CantidadEntregasPorMes_R_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpleado" Type="int" Mode="In" />
+    <Parameter Name="IDMES" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CtRol_R_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Empleado_C_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEMpleado" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="IdRol" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Empleado_R_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Empleado_R_IdEMPLEADO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEMpleado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Empleado_R_Nomina" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEMpleado" Type="int" Mode="In" />
+    <Parameter Name="Mes" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Empleado_R_NuevoRegistro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="PruebasModelStoreContainer">
+    <EntitySet Name="CantidadEntregasPorMes" EntityType="Self.CantidadEntregasPorMes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CtEntregaBono" EntityType="Self.CtEntregaBono" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CtSalario" EntityType="Self.CtSalario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RelEmpleadoBono" EntityType="Self.RelEmpleadoBono" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RelEmpleadoSalario" EntityType="Self.RelEmpleadoSalario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RelEntregaBono" EntityType="Self.RelEntregaBono" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

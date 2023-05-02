@@ -28,10 +28,14 @@ namespace Managerr.DB
         }
     
         public virtual DbSet<CantidadEntregasPorMes> CantidadEntregasPorMes { get; set; }
+        public virtual DbSet<CtEntregaBono> CtEntregaBono { get; set; }
+        public virtual DbSet<CtSalario> CtSalario { get; set; }
         public virtual DbSet<Empleado> Empleado { get; set; }
+        public virtual DbSet<RelEmpleadoBono> RelEmpleadoBono { get; set; }
         public virtual DbSet<RelEmpleadoSalario> RelEmpleadoSalario { get; set; }
+        public virtual DbSet<RelEntregaBono> RelEntregaBono { get; set; }
     
-        public virtual ObjectResult<Nullable<decimal>> CantidadEntregasPorMes_C_datos(Nullable<int> idEmpleado, Nullable<int> mes, Nullable<int> idCantEntregas)
+        public virtual ObjectResult<Nullable<int>> CantidadEntregasPorMes_C_datos(Nullable<int> idEmpleado, Nullable<int> mes, Nullable<int> idCantEntregas)
         {
             var idEmpleadoParameter = idEmpleado.HasValue ?
                 new ObjectParameter("IdEmpleado", idEmpleado) :
@@ -45,7 +49,7 @@ namespace Managerr.DB
                 new ObjectParameter("IdCantEntregas", idCantEntregas) :
                 new ObjectParameter("IdCantEntregas", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("CantidadEntregasPorMes_C_datos", idEmpleadoParameter, mesParameter, idCantEntregasParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("CantidadEntregasPorMes_C_datos", idEmpleadoParameter, mesParameter, idCantEntregasParameter);
         }
     
         public virtual ObjectResult<CantidadEntregasPorMes_R_datos_Result> CantidadEntregasPorMes_R_datos(Nullable<int> idEmpleado, Nullable<int> iDMES)
@@ -66,8 +70,12 @@ namespace Managerr.DB
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<CtRol_R_datos_Result>("CtRol_R_datos");
         }
     
-        public virtual ObjectResult<Nullable<decimal>> Empleado_C_datos(string nombre, Nullable<int> idRol)
+        public virtual ObjectResult<Nullable<int>> Empleado_C_datos(Nullable<int> idEMpleado, string nombre, Nullable<int> idRol)
         {
+            var idEMpleadoParameter = idEMpleado.HasValue ?
+                new ObjectParameter("IdEMpleado", idEMpleado) :
+                new ObjectParameter("IdEMpleado", typeof(int));
+    
             var nombreParameter = nombre != null ?
                 new ObjectParameter("Nombre", nombre) :
                 new ObjectParameter("Nombre", typeof(string));
@@ -76,7 +84,7 @@ namespace Managerr.DB
                 new ObjectParameter("IdRol", idRol) :
                 new ObjectParameter("IdRol", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("Empleado_C_datos", nombreParameter, idRolParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("Empleado_C_datos", idEMpleadoParameter, nombreParameter, idRolParameter);
         }
     
         public virtual ObjectResult<Empleado_R_datos_Result> Empleado_R_datos(string nombre)
@@ -86,6 +94,28 @@ namespace Managerr.DB
                 new ObjectParameter("Nombre", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Empleado_R_datos_Result>("Empleado_R_datos", nombreParameter);
+        }
+    
+        public virtual ObjectResult<Empleado_R_IdEMPLEADO_Result> Empleado_R_IdEMPLEADO(Nullable<int> idEMpleado)
+        {
+            var idEMpleadoParameter = idEMpleado.HasValue ?
+                new ObjectParameter("IdEMpleado", idEMpleado) :
+                new ObjectParameter("IdEMpleado", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Empleado_R_IdEMPLEADO_Result>("Empleado_R_IdEMPLEADO", idEMpleadoParameter);
+        }
+    
+        public virtual ObjectResult<Empleado_R_Nomina_Result> Empleado_R_Nomina(Nullable<int> idEMpleado, Nullable<int> mes)
+        {
+            var idEMpleadoParameter = idEMpleado.HasValue ?
+                new ObjectParameter("IdEMpleado", idEMpleado) :
+                new ObjectParameter("IdEMpleado", typeof(int));
+    
+            var mesParameter = mes.HasValue ?
+                new ObjectParameter("Mes", mes) :
+                new ObjectParameter("Mes", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Empleado_R_Nomina_Result>("Empleado_R_Nomina", idEMpleadoParameter, mesParameter);
         }
     
         public virtual ObjectResult<Nullable<int>> Empleado_R_NuevoRegistro()

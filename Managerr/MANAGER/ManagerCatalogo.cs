@@ -8,7 +8,7 @@ using Managerr.DTO;
 
 namespace Managerr.MANAGER
 {
-   public class ManagerCatalogo 
+   public class ManagerCatalogo   
     {
        public ManagerCatalogo Instance
        {

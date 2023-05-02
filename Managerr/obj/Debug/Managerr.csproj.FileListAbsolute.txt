@@ -1,0 +1,9 @@
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\Managerr\bin\Debug\Managerr.dll.config
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\Managerr\bin\Debug\Managerr.dll
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\Managerr\bin\Debug\Managerr.pdb
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\Managerr\bin\Debug\EntityFramework.dll
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\Managerr\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\Managerr\bin\Debug\EntityFramework.xml
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\Managerr\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\Managerr\obj\Debug\Managerr.dll
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\Managerr\obj\Debug\Managerr.pdb

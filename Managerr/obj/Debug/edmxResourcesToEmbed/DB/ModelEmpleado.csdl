@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PruebasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="PruebasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CantidadEntregasPorMes" EntityType="PruebasModel.CantidadEntregasPorMes" />
+    <EntitySet Name="CtEntregaBono" EntityType="PruebasModel.CtEntregaBono" />
+    <EntitySet Name="CtSalario" EntityType="PruebasModel.CtSalario" />
+    <EntitySet Name="Empleado" EntityType="PruebasModel.Empleado" />
+    <EntitySet Name="RelEmpleadoBono" EntityType="PruebasModel.RelEmpleadoBono" />
+    <EntitySet Name="RelEmpleadoSalario" EntityType="PruebasModel.RelEmpleadoSalario" />
+    <EntitySet Name="RelEntregaBono" EntityType="PruebasModel.RelEntregaBono" />
+    <FunctionImport Name="CantidadEntregasPorMes_C_datos" ReturnType="Collection(Int32)">
+      <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
+      <Parameter Name="Mes" Mode="In" Type="Int32" />
+      <Parameter Name="IdCantEntregas" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CantidadEntregasPorMes_R_datos" ReturnType="Collection(PruebasModel.CantidadEntregasPorMes_R_datos_Result)">
+      <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
+      <Parameter Name="IDMES" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CtRol_R_datos" ReturnType="Collection(PruebasModel.CtRol_R_datos_Result)" />
+    <FunctionImport Name="Empleado_C_datos" ReturnType="Collection(Int32)">
+      <Parameter Name="IdEMpleado" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="IdRol" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Empleado_R_datos" ReturnType="Collection(PruebasModel.Empleado_R_datos_Result)">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Empleado_R_IdEMPLEADO" ReturnType="Collection(PruebasModel.Empleado_R_IdEMPLEADO_Result)">
+      <Parameter Name="IdEMpleado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Empleado_R_Nomina" ReturnType="Collection(PruebasModel.Empleado_R_Nomina_Result)">
+      <Parameter Name="IdEMpleado" Mode="In" Type="Int32" />
+      <Parameter Name="Mes" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Empleado_R_NuevoRegistro" ReturnType="Collection(Int32)" />
+  </EntityContainer>
+  <EntityType Name="CantidadEntregasPorMes">
+    <Key>
+      <PropertyRef Name="IdRelEmpleadoMes" />
+    </Key>
+    <Property Name="IdRelEmpleadoMes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEmpleado" Type="Int32" />
+    <Property Name="Mes" Type="Int32" />
+    <Property Name="IdCantEnetregas" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CtEntregaBono">
+    <Key>
+      <PropertyRef Name="IdBonoEntregas" />
+    </Key>
+    <Property Name="IdBonoEntregas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Total" Type="Double" />
+  </EntityType>
+  <EntityType Name="CtSalario">
+    <Key>
+      <PropertyRef Name="idSalario" />
+    </Key>
+    <Property Name="idSalario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Total" Type="Double" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpleado" />
+    </Key>
+    <Property Name="IdEmpleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IdRol" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RelEmpleadoBono">
+    <Key>
+      <PropertyRef Name="IdRelEmpleadoBono" />
+    </Key>
+    <Property Name="IdRelEmpleadoBono" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdBono" Type="Int32" />
+    <Property Name="IdRol" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RelEmpleadoSalario">
+    <Key>
+      <PropertyRef Name="IdRelSalarioEmpleado" />
+    </Key>
+    <Property Name="IdRelSalarioEmpleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSalario" Type="Int32" />
+    <Property Name="IdEmpleado" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RelEntregaBono">
+    <Key>
+      <PropertyRef Name="IdRelEntregaEmpleado" />
+    </Key>
+    <Property Name="IdRelEntregaEmpleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEntrega" Type="Int32" />
+    <Property Name="IdEmpleado" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="CantidadEntregasPorMes_R_datos_Result">
+    <Property Type="Int32" Name="IdEmpleado" Nullable="true" />
+    <Property Type="Int32" Name="Mes" Nullable="true" />
+    <Property Type="Int32" Name="IdCantEnetregas" Nullable="true" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="CtRol_R_datos_Result">
+    <Property Type="Int32" Name="IdRol" Nullable="true" />
+    <Property Type="String" Name="DescripcionRol" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Empleado_R_datos_Result">
+    <Property Type="Int32" Name="IdEmpleado" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="IdRol" Nullable="true" />
+    <Property Type="String" Name="DescripcionRol" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Empleado_R_IdEMPLEADO_Result">
+    <Property Type="Int32" Name="IdEmpleado" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="IdRol" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Empleado_R_Nomina_Result">
+    <Property Type="Int32" Name="iD" Nullable="false" />
+    <Property Type="String" Name="NombreEmpleado" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="DesRol" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="Salario" Nullable="true" />
+    <Property Type="String" Name="TipoSalario" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="TotalBono" Nullable="true" />
+    <Property Type="Int32" Name="IdCantEnetregas" Nullable="true" />
+    <Property Type="Double" Name="TOTALENTREGA" Nullable="true" />
+  </ComplexType>
+</Schema>

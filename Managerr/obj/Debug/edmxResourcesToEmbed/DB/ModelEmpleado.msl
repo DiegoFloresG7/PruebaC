@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PruebasModelStoreContainer" CdmEntityContainer="PruebasEntities">
+    <EntitySetMapping Name="CantidadEntregasPorMes">
+      <EntityTypeMapping TypeName="PruebasModel.CantidadEntregasPorMes">
+        <MappingFragment StoreEntitySet="CantidadEntregasPorMes">
+          <ScalarProperty Name="IdCantEnetregas" ColumnName="IdCantEnetregas" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="IdRelEmpleadoMes" ColumnName="IdRelEmpleadoMes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CtEntregaBono">
+      <EntityTypeMapping TypeName="PruebasModel.CtEntregaBono">
+        <MappingFragment StoreEntitySet="CtEntregaBono">
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdBonoEntregas" ColumnName="IdBonoEntregas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CtSalario">
+      <EntityTypeMapping TypeName="PruebasModel.CtSalario">
+        <MappingFragment StoreEntitySet="CtSalario">
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="idSalario" ColumnName="idSalario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleado">
+      <EntityTypeMapping TypeName="PruebasModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RelEmpleadoBono">
+      <EntityTypeMapping TypeName="PruebasModel.RelEmpleadoBono">
+        <MappingFragment StoreEntitySet="RelEmpleadoBono">
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="IdBono" ColumnName="IdBono" />
+          <ScalarProperty Name="IdRelEmpleadoBono" ColumnName="IdRelEmpleadoBono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RelEmpleadoSalario">
+      <EntityTypeMapping TypeName="PruebasModel.RelEmpleadoSalario">
+        <MappingFragment StoreEntitySet="RelEmpleadoSalario">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="IdSalario" ColumnName="IdSalario" />
+          <ScalarProperty Name="IdRelSalarioEmpleado" ColumnName="IdRelSalarioEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RelEntregaBono">
+      <EntityTypeMapping TypeName="PruebasModel.RelEntregaBono">
+        <MappingFragment StoreEntitySet="RelEntregaBono">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="IdEntrega" ColumnName="IdEntrega" />
+          <ScalarProperty Name="IdRelEntregaEmpleado" ColumnName="IdRelEntregaEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="CantidadEntregasPorMes_C_datos" FunctionName="PruebasModel.Store.CantidadEntregasPorMes_C_datos" />
+    <FunctionImportMapping FunctionImportName="CantidadEntregasPorMes_R_datos" FunctionName="PruebasModel.Store.CantidadEntregasPorMes_R_datos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PruebasModel.CantidadEntregasPorMes_R_datos_Result">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="IdCantEnetregas" ColumnName="IdCantEnetregas" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CtRol_R_datos" FunctionName="PruebasModel.Store.CtRol_R_datos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PruebasModel.CtRol_R_datos_Result">
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="DescripcionRol" ColumnName="DescripcionRol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Empleado_C_datos" FunctionName="PruebasModel.Store.Empleado_C_datos" />
+    <FunctionImportMapping FunctionImportName="Empleado_R_datos" FunctionName="PruebasModel.Store.Empleado_R_datos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PruebasModel.Empleado_R_datos_Result">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="DescripcionRol" ColumnName="DescripcionRol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Empleado_R_IdEMPLEADO" FunctionName="PruebasModel.Store.Empleado_R_IdEMPLEADO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PruebasModel.Empleado_R_IdEMPLEADO_Result">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Empleado_R_Nomina" FunctionName="PruebasModel.Store.Empleado_R_Nomina">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PruebasModel.Empleado_R_Nomina_Result">
+          <ScalarProperty Name="iD" ColumnName="iD" />
+          <ScalarProperty Name="NombreEmpleado" ColumnName="NombreEmpleado" />
+          <ScalarProperty Name="DesRol" ColumnName="DesRol" />
+          <ScalarProperty Name="Salario" ColumnName="Salario" />
+          <ScalarProperty Name="TipoSalario" ColumnName="TipoSalario" />
+          <ScalarProperty Name="TotalBono" ColumnName="TotalBono" />
+          <ScalarProperty Name="IdCantEnetregas" ColumnName="IdCantEnetregas" />
+          <ScalarProperty Name="TOTALENTREGA" ColumnName="TOTALENTREGA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Empleado_R_NuevoRegistro" FunctionName="PruebasModel.Store.Empleado_R_NuevoRegistro" />
+  </EntityContainerMapping>
+</Mapping>

@@ -5,9 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="6cfbca5a3dfc425c9e000aba7d8f76cb" Name="Diagram1">
-        <EntityTypeShape EntityType="PruebasModel.CantidadEntregasPorMes" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PruebasModel.Empleado" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PruebasModel.RelEmpleadoSalario" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebasModel.CantidadEntregasPorMes" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PruebasModel.CtEntregaBono" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PruebasModel.CtSalario" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="PruebasModel.Empleado" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="PruebasModel.RelEmpleadoBono" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PruebasModel.RelEmpleadoSalario" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="PruebasModel.RelEntregaBono" Width="1.5" PointX="6.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

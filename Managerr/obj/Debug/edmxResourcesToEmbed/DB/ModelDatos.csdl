@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="clinicaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Consulta">
+    <Key>
+      <PropertyRef Name="IdConsulta" />
+      <PropertyRef Name="IdPaciente" />
+    </Key>
+    <Property Name="IdConsulta" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPaciente" Type="Int64" Nullable="false" />
+    <Property Name="IdAgenda" Type="Int64" />
+    <Property Name="Motivo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PadecimientoActual" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="EnConsulta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PlanTerapeutico" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FechaConsulta" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="clinicaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Consulta" EntityType="Self.Consulta" />
+    <FunctionImport Name="Agenda_C_Nueva" ReturnType="Collection(Decimal)">
+      <Parameter Name="IdPaciente" Mode="In" Type="Int32" />
+      <Parameter Name="IdDoctor" Mode="In" Type="Int32" />
+      <Parameter Name="FechaCita" Mode="In" Type="DateTime" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="IdEstatus" Mode="In" Type="Int32" />
+      <Parameter Name="IdClinica" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>
