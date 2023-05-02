@@ -22,6 +22,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ConsultaEmpleado">
+      <soap:operation soapAction="urn:WCFEmpleado/ConsultaEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardaEntregasEMpleados">
+      <soap:operation soapAction="urn:WCFEmpleado/GuardaEntregasEMpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaNominao">
+      <soap:operation soapAction="urn:WCFEmpleado/ConsultaNominao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="WCFEmpleado">
     <wsdl:port name="BasicHttpBinding_WCFEmpleado" binding="tns:BasicHttpBinding_WCFEmpleado">

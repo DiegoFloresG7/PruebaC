@@ -4,8 +4,19 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="DescripcionRol" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IdEmpleado" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEntregas" type="xs:int" />
+      <xs:element minOccurs="0" name="IdMes" type="xs:int" />
       <xs:element minOccurs="0" name="IdRol" type="xs:int" />
       <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fBono" type="xs:double" />
+      <xs:element minOccurs="0" name="fEntregas" type="xs:double" />
+      <xs:element minOccurs="0" name="fISR" type="xs:double" />
+      <xs:element minOccurs="0" name="fSalario" type="xs:double" />
+      <xs:element minOccurs="0" name="fTotalBono" type="xs:double" />
+      <xs:element minOccurs="0" name="fTotalEntregas" type="xs:double" />
+      <xs:element minOccurs="0" name="fTotalGeneral" type="xs:double" />
+      <xs:element minOccurs="0" name="fTotalGeneralConISR" type="xs:double" />
+      <xs:element minOccurs="0" name="fTotalSalario" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DTOEmpleado" nillable="true" type="tns:DTOEmpleado" />

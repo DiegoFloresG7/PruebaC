@@ -29,10 +29,43 @@ namespace PruebaC.ServicioEmpleado {
         private int IdEmpleadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdEntregasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdMesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdRolField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double fBonoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double fEntregasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double fISRField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double fSalarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double fTotalBonoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double fTotalEntregasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double fTotalGeneralField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double fTotalGeneralConISRField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double fTotalSalarioField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -71,6 +104,32 @@ namespace PruebaC.ServicioEmpleado {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdEntregas {
+            get {
+                return this.IdEntregasField;
+            }
+            set {
+                if ((this.IdEntregasField.Equals(value) != true)) {
+                    this.IdEntregasField = value;
+                    this.RaisePropertyChanged("IdEntregas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdMes {
+            get {
+                return this.IdMesField;
+            }
+            set {
+                if ((this.IdMesField.Equals(value) != true)) {
+                    this.IdMesField = value;
+                    this.RaisePropertyChanged("IdMes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int IdRol {
             get {
                 return this.IdRolField;
@@ -92,6 +151,123 @@ namespace PruebaC.ServicioEmpleado {
                 if ((object.ReferenceEquals(this.NombreField, value) != true)) {
                     this.NombreField = value;
                     this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double fBono {
+            get {
+                return this.fBonoField;
+            }
+            set {
+                if ((this.fBonoField.Equals(value) != true)) {
+                    this.fBonoField = value;
+                    this.RaisePropertyChanged("fBono");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double fEntregas {
+            get {
+                return this.fEntregasField;
+            }
+            set {
+                if ((this.fEntregasField.Equals(value) != true)) {
+                    this.fEntregasField = value;
+                    this.RaisePropertyChanged("fEntregas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double fISR {
+            get {
+                return this.fISRField;
+            }
+            set {
+                if ((this.fISRField.Equals(value) != true)) {
+                    this.fISRField = value;
+                    this.RaisePropertyChanged("fISR");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double fSalario {
+            get {
+                return this.fSalarioField;
+            }
+            set {
+                if ((this.fSalarioField.Equals(value) != true)) {
+                    this.fSalarioField = value;
+                    this.RaisePropertyChanged("fSalario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double fTotalBono {
+            get {
+                return this.fTotalBonoField;
+            }
+            set {
+                if ((this.fTotalBonoField.Equals(value) != true)) {
+                    this.fTotalBonoField = value;
+                    this.RaisePropertyChanged("fTotalBono");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double fTotalEntregas {
+            get {
+                return this.fTotalEntregasField;
+            }
+            set {
+                if ((this.fTotalEntregasField.Equals(value) != true)) {
+                    this.fTotalEntregasField = value;
+                    this.RaisePropertyChanged("fTotalEntregas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double fTotalGeneral {
+            get {
+                return this.fTotalGeneralField;
+            }
+            set {
+                if ((this.fTotalGeneralField.Equals(value) != true)) {
+                    this.fTotalGeneralField = value;
+                    this.RaisePropertyChanged("fTotalGeneral");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double fTotalGeneralConISR {
+            get {
+                return this.fTotalGeneralConISRField;
+            }
+            set {
+                if ((this.fTotalGeneralConISRField.Equals(value) != true)) {
+                    this.fTotalGeneralConISRField = value;
+                    this.RaisePropertyChanged("fTotalGeneralConISR");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double fTotalSalario {
+            get {
+                return this.fTotalSalarioField;
+            }
+            set {
+                if ((this.fTotalSalarioField.Equals(value) != true)) {
+                    this.fTotalSalarioField = value;
+                    this.RaisePropertyChanged("fTotalSalario");
                 }
             }
         }
@@ -121,6 +297,24 @@ namespace PruebaC.ServicioEmpleado {
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:WCFEmpleado/GuardaEMpleados", ReplyAction="urn:WCFEmpleado/GuardaEMpleadosResponse")]
         System.Threading.Tasks.Task<int> GuardaEMpleadosAsync(PruebaC.ServicioEmpleado.DTOEmpleado datos);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:WCFEmpleado/ConsultaEmpleado", ReplyAction="urn:WCFEmpleado/ConsultaEmpleadoResponse")]
+        PruebaC.ServicioEmpleado.DTOEmpleado ConsultaEmpleado(int IdEmpleado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:WCFEmpleado/ConsultaEmpleado", ReplyAction="urn:WCFEmpleado/ConsultaEmpleadoResponse")]
+        System.Threading.Tasks.Task<PruebaC.ServicioEmpleado.DTOEmpleado> ConsultaEmpleadoAsync(int IdEmpleado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:WCFEmpleado/GuardaEntregasEMpleados", ReplyAction="urn:WCFEmpleado/GuardaEntregasEMpleadosResponse")]
+        int GuardaEntregasEMpleados(PruebaC.ServicioEmpleado.DTOEmpleado datos);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:WCFEmpleado/GuardaEntregasEMpleados", ReplyAction="urn:WCFEmpleado/GuardaEntregasEMpleadosResponse")]
+        System.Threading.Tasks.Task<int> GuardaEntregasEMpleadosAsync(PruebaC.ServicioEmpleado.DTOEmpleado datos);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:WCFEmpleado/ConsultaNominao", ReplyAction="urn:WCFEmpleado/ConsultaNominaoResponse")]
+        PruebaC.ServicioEmpleado.DTOEmpleado[] ConsultaNominao(PruebaC.ServicioEmpleado.DTOEmpleado Datos);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:WCFEmpleado/ConsultaNominao", ReplyAction="urn:WCFEmpleado/ConsultaNominaoResponse")]
+        System.Threading.Tasks.Task<PruebaC.ServicioEmpleado.DTOEmpleado[]> ConsultaNominaoAsync(PruebaC.ServicioEmpleado.DTOEmpleado Datos);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -164,6 +358,30 @@ namespace PruebaC.ServicioEmpleado {
         
         public System.Threading.Tasks.Task<int> GuardaEMpleadosAsync(PruebaC.ServicioEmpleado.DTOEmpleado datos) {
             return base.Channel.GuardaEMpleadosAsync(datos);
+        }
+        
+        public PruebaC.ServicioEmpleado.DTOEmpleado ConsultaEmpleado(int IdEmpleado) {
+            return base.Channel.ConsultaEmpleado(IdEmpleado);
+        }
+        
+        public System.Threading.Tasks.Task<PruebaC.ServicioEmpleado.DTOEmpleado> ConsultaEmpleadoAsync(int IdEmpleado) {
+            return base.Channel.ConsultaEmpleadoAsync(IdEmpleado);
+        }
+        
+        public int GuardaEntregasEMpleados(PruebaC.ServicioEmpleado.DTOEmpleado datos) {
+            return base.Channel.GuardaEntregasEMpleados(datos);
+        }
+        
+        public System.Threading.Tasks.Task<int> GuardaEntregasEMpleadosAsync(PruebaC.ServicioEmpleado.DTOEmpleado datos) {
+            return base.Channel.GuardaEntregasEMpleadosAsync(datos);
+        }
+        
+        public PruebaC.ServicioEmpleado.DTOEmpleado[] ConsultaNominao(PruebaC.ServicioEmpleado.DTOEmpleado Datos) {
+            return base.Channel.ConsultaNominao(Datos);
+        }
+        
+        public System.Threading.Tasks.Task<PruebaC.ServicioEmpleado.DTOEmpleado[]> ConsultaNominaoAsync(PruebaC.ServicioEmpleado.DTOEmpleado Datos) {
+            return base.Channel.ConsultaNominaoAsync(Datos);
         }
     }
 }

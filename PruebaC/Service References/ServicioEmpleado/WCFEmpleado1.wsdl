@@ -19,6 +19,24 @@
   <wsdl:message name="WCFEmpleado_GuardaEMpleados_OutputMessage">
     <wsdl:part name="parameters" element="GuardaEMpleadosResponse" />
   </wsdl:message>
+  <wsdl:message name="WCFEmpleado_ConsultaEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="ConsultaEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="WCFEmpleado_ConsultaEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="ConsultaEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WCFEmpleado_GuardaEntregasEMpleados_InputMessage">
+    <wsdl:part name="parameters" element="GuardaEntregasEMpleados" />
+  </wsdl:message>
+  <wsdl:message name="WCFEmpleado_GuardaEntregasEMpleados_OutputMessage">
+    <wsdl:part name="parameters" element="GuardaEntregasEMpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="WCFEmpleado_ConsultaNominao_InputMessage">
+    <wsdl:part name="parameters" element="ConsultaNominao" />
+  </wsdl:message>
+  <wsdl:message name="WCFEmpleado_ConsultaNominao_OutputMessage">
+    <wsdl:part name="parameters" element="ConsultaNominaoResponse" />
+  </wsdl:message>
   <wsdl:portType name="WCFEmpleado">
     <wsdl:operation name="DoWork">
       <wsdl:input wsaw:Action="urn:WCFEmpleado/DoWork" message="WCFEmpleado_DoWork_InputMessage" />
@@ -27,6 +45,18 @@
     <wsdl:operation name="GuardaEMpleados">
       <wsdl:input wsaw:Action="urn:WCFEmpleado/GuardaEMpleados" message="WCFEmpleado_GuardaEMpleados_InputMessage" />
       <wsdl:output wsaw:Action="urn:WCFEmpleado/GuardaEMpleadosResponse" message="WCFEmpleado_GuardaEMpleados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaEmpleado">
+      <wsdl:input wsaw:Action="urn:WCFEmpleado/ConsultaEmpleado" message="WCFEmpleado_ConsultaEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="urn:WCFEmpleado/ConsultaEmpleadoResponse" message="WCFEmpleado_ConsultaEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaEntregasEMpleados">
+      <wsdl:input wsaw:Action="urn:WCFEmpleado/GuardaEntregasEMpleados" message="WCFEmpleado_GuardaEntregasEMpleados_InputMessage" />
+      <wsdl:output wsaw:Action="urn:WCFEmpleado/GuardaEntregasEMpleadosResponse" message="WCFEmpleado_GuardaEntregasEMpleados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaNominao">
+      <wsdl:input wsaw:Action="urn:WCFEmpleado/ConsultaNominao" message="WCFEmpleado_ConsultaNominao_InputMessage" />
+      <wsdl:output wsaw:Action="urn:WCFEmpleado/ConsultaNominaoResponse" message="WCFEmpleado_ConsultaNominao_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>
