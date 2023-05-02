@@ -33,5 +33,41 @@ namespace WCFPruebas
         {
             return new Managerr.MANAGER.ManagerEmpleado().GuardaNuevoEMpleado(datos);
         }
+
+        [OperationContract]
+        /// <summary>
+        /// Consulta los empleados
+        /// </summary>
+        /// <param name="datos"></param>
+        /// <returns></returns>
+        public DTOEmpleado ConsultaEmpleado(int IdEmpleado)
+        {
+            return new Managerr.MANAGER.ManagerEmpleado().ConsultaEmpleadoBYId(IdEmpleado);
+        }
+
+        [OperationContract]
+        /// <summary>
+        /// Guarda entregas
+        /// </summary>
+        /// <param name="datos"></param>
+        /// <returns></returns>
+        public int GuardaEntregasEMpleados(DTOEmpleado datos)
+        {
+            return new Managerr.MANAGER.ManagerEmpleado().GuardaEntregasEMpleado(datos);
+        }
+
+
+        [OperationContract]
+        /// <summary>
+        /// Consulta la nomina de empleados
+        /// </summary>
+        /// <param name="datos"></param>
+        /// <returns></returns>
+        public List<DTOEmpleado> ConsultaNominao(DTOEmpleado Datos)
+        {
+            return new Managerr.MANAGER.ManagerEmpleado().CosnultaNomina(Datos);
+        }
+
+
     }
 }

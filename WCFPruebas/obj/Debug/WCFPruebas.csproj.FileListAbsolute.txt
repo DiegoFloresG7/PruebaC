@@ -1,0 +1,12 @@
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\bin\WCFPruebas.dll.config
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\bin\WCFPruebas.dll
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\bin\WCFPruebas.pdb
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\bin\EntityFramework.dll
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\bin\EntityFramework.SqlServer.dll
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\bin\Managerr.dll
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\bin\Managerr.pdb
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\bin\EntityFramework.xml
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\bin\EntityFramework.SqlServer.xml
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\obj\Debug\WCFPruebas.csprojResolveAssemblyReference.cache
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\obj\Debug\WCFPruebas.dll
+C:\Users\CLNDTIC01SAPRO6\Documents\PruebaC\WCFPruebas\obj\Debug\WCFPruebas.pdb
