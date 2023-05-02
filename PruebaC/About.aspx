@@ -2,6 +2,19 @@
 
 
    <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
+       
+          <script>
+              function acceptNum(evt) {
+                  // NOTE: Backspace = 8, Enter = 13, '0' = 48, '9' = 57	
+                  var key = nav4 ? evt.which : evt.keyCode;
+                  return (key <= 13 || (key >= 48 && key <= 57));
+              }
+              function ConsultaEmpleadoExistente() {
+                  document.getElementById("<%= btnBuscar.ClientID %>").click();
+
+       }
+     </script>
+       
        <!DOCTYPE html>
      
 <html lang="en">
@@ -29,7 +42,7 @@
                                                     <label class="col-md-3" style="font-size:16px;">Nùmero</label>
                                                 </td>
                                                 <td>
-                                                    <asp:TextBox ID="txtNumero" Enabled="true" CssClass="form-control"   autocomplete="off" runat="server" data-rule-number="true" data-rule-minlength="1" />
+                                                    <asp:TextBox ID="txtNumero" CssClass="form-control" onblur="javascript:ConsultaEmpleadoExistente();"   autocomplete="off" runat="server" data-rule-number="true" data-rule-minlength="1" />
                                                 </td>
                                           </tr>
                                           <tr>
@@ -61,7 +74,7 @@
                              
                            </div>
                         </div>
-                  
+                   <asp:Button Style="display: none"    ID="btnBuscar" runat="server" OnClick="btnBuscar_Click"   />
                  </div>
           </form>
       </section>

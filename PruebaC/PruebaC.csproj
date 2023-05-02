@@ -173,6 +173,7 @@
     <Content Include="bin\System.Web.Optimization.dll" />
     <Content Include="bin\System.Web.Providers.dll" />
     <Content Include="bin\WebGrease.dll" />
+    <Content Include="ConsultaEntregas.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -307,6 +308,7 @@
     <Content Include="js\revolution\js\jquery.themepunch.revolution.min.js" />
     <Content Include="js\revolution\js\jquery.themepunch.tools.min.js" />
     <Content Include="js\slider-setting.js" />
+    <Content Include="Nomina.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\cochin.woff" />
     <Content Include="fonts\cochin.woff2" />
@@ -399,6 +401,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\ServicioEmpleado\PruebaC.ServicioEmpleado.DTOEmpleado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\ServicioEmpleado\WCFEmpleado.disco" />
     <None Include="Service References\ServicioEmpleado\configuration91.svcinfo" />
     <None Include="Service References\ServicioEmpleado\configuration.svcinfo" />
@@ -488,6 +493,13 @@
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ConsultaEntregas.aspx.cs">
+      <DependentUpon>ConsultaEntregas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaEntregas.aspx.designer.cs">
+      <DependentUpon>ConsultaEntregas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -504,6 +516,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Nomina.aspx.cs">
+      <DependentUpon>Nomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nomina.aspx.designer.cs">
+      <DependentUpon>Nomina.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ServiceReference1\Reference.cs">

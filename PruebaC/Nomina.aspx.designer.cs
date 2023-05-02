@@ -10,7 +10,7 @@
 namespace PruebaC {
     
     
-    public partial class About {
+    public partial class Nomina {
         
         /// <summary>
         /// Control form1.
@@ -31,31 +31,31 @@ namespace PruebaC {
         protected global::System.Web.UI.WebControls.TextBox txtNumero;
         
         /// <summary>
-        /// Control txtNombre.
+        /// Control txtDate.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.TextBox txtDate;
         
         /// <summary>
-        /// Control ddlRol.
+        /// Control btnConsultar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRol;
+        protected global::System.Web.UI.WebControls.Button btnConsultar;
         
         /// <summary>
-        /// Control btnAgregar.
+        /// Control gvNomina.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregar;
+        protected global::System.Web.UI.WebControls.GridView gvNomina;
         
         /// <summary>
         /// Control btnBuscar.
